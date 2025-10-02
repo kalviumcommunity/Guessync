@@ -190,7 +190,7 @@ return (
           </h2>
           <button
             onClick={() => setShowRulesModal(true)}
-            className={`duration-btn font-silkscreen px-6 py-2 rounded-lg border-[3px] text-[17px] transition ${
+            className={`duration-btn cursor-pointer font-silkscreen px-6 py-2 rounded-lg border-[3px] text-[17px] transition ${
               rulesFile
               ? "border-[#FFFB00] text-[#FFFB00] bg-[#FFFB00]/20 shadow-[0_0_15px_#FFFB00]"
               : "border-gray-600 text-gray-500 bg-gray-500/20 hover:border-[#FFFB00] hover:text-[#FFFB00] hover:bg-[#FFFB00]/10 hover:shadow-[0_0_15px_#111]"
@@ -218,7 +218,7 @@ return (
             </label>
             <div className="flex items-center gap-3 sm:gap-5">
               <button
-                className="bg-[#FFFB00] w-10 h-10 sm:w-[51px] sm:h-[51px] font-silkscreen rounded-lg text-black text-xl sm:text-[1.53rem] drop-shadow-[0_0_7px_#FFFB00]"
+                className="bg-[#FFFB00] cursor-pointer cursor-pointer w-10 h-10 sm:w-[51px] sm:h-[51px] font-silkscreen rounded-lg text-black text-xl sm:text-[1.53rem] drop-shadow-[0_0_7px_#FFFB00]"
                 onClick={() => ctrl.set(Math.max(1, ctrl.value - 1))}
                 >
                 -
@@ -227,7 +227,7 @@ return (
                 {ctrl.value}
               </span>
               <button
-                className="bg-[#FFFB00] w-10 h-10 sm:w-[51px] sm:h-[51px] font-silkscreen rounded-lg text-black text-xl sm:text-[1.53rem] drop-shadow-[0_0_7px_#FFFB00]"
+                className="bg-[#FFFB00] cursor-pointer w-10 h-10 sm:w-[51px] sm:h-[51px] font-silkscreen rounded-lg text-black text-xl sm:text-[1.53rem] drop-shadow-[0_0_7px_#FFFB00]"
                 onClick={() =>
                   ctrl.set(Math.min(ctrl.max, ctrl.value + 1))
                 }
@@ -248,7 +248,7 @@ return (
               <button
               key={val}
               onClick={() => setDuration(val)}
-              className={`duration-btn font-silkscreen px-4 py-2 sm:px-6 sm:py-2 rounded-lg border-[3px] text-sm sm:text-[17px] transition ${
+              className={`duration-btn cursor-pointer font-silkscreen px-4 py-2 sm:px-6 sm:py-2 rounded-lg border-[3px] text-sm sm:text-[17px] transition ${
                 duration === val
                 ? "border-[#FFFB00] text-[#FFFB00] bg-[#FFFB00]/20 shadow-[0_0_15px_#FFFB00]"
                 : "border-gray-600 text-gray-500 bg-gray-500/20 hover:border-[#FFFB00] hover:text-[#FFFB00] hover:bg-[#FFFB00]/10 hover:shadow-[0_0_15px_#111]"
@@ -266,7 +266,7 @@ return (
         {!spotifyConfirmed && !showCreateBtn && (
           <button
           onClick={() => setShowModal(true)}
-          className="font-silkscreen w-full md:w-[280px] py-3 md:py-4 rounded-lg bg-[#FFFB00] text-black text-base md:text-[1.3rem] drop-shadow-[0_0_7px_#FFFB00] hover:drop-shadow-[0_0_10px_#FFFB00]"
+          className="font-silkscreen cursor-pointer w-full md:w-[280px] py-3 md:py-4 rounded-lg bg-[#FFFB00] text-black text-base md:text-[1.3rem] drop-shadow-[0_0_7px_#FFFB00] hover:drop-shadow-[0_0_10px_#FFFB00]"
           >
             CHOOSE LANGUAGE
           </button>
@@ -276,7 +276,7 @@ return (
           <div className="relative w-full md:w-[280px] h-12 md:h-14">
             {!spotifyInputVisible ? (
               <button
-              className="w-full h-full bg-[#1ED760] text-black font-silkscreen py-2 px-4 rounded-lg text-sm md:text-[1.1rem] drop-shadow-[0_0_7px_#1ED760] hover:drop-shadow-[0_0_10px_#1ED760] flex items-center justify-center gap-2"
+              className="w-full h-full cursor-pointer bg-[#1ED760] text-black font-silkscreen py-2 px-4 rounded-lg text-sm md:text-[1.1rem] drop-shadow-[0_0_7px_#1ED760] hover:drop-shadow-[0_0_10px_#1ED760] flex items-center justify-center gap-2"
               onClick={() => setSpotifyInputVisible(true)}
               >
                 <img src={spotcon} alt="spotify" className="h-4 md:h-6" />
@@ -313,7 +313,7 @@ return (
         {showCreateBtn && (
           <button
           onClick={handleCreateRoom}
-          className="bg-[#FFFB00] text-black font-silkscreen px-6 py-3 rounded-lg text-base md:text-xl drop-shadow-[0_0_7px_#FFFB00] hover:drop-shadow-[0_0_10px_#FFFB00] w-full md:w-[240px] md:h-14"
+          className="bg-[#FFFB00] cursor-pointer text-black font-silkscreen px-6 py-3 rounded-lg text-base md:text-xl drop-shadow-[0_0_7px_#FFFB00] hover:drop-shadow-[0_0_10px_#FFFB00] w-full md:w-[240px] md:h-14"
           >
             CREATE ROOM
           </button>
@@ -325,7 +325,7 @@ return (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-black border-4 border-[#FFFB00] p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-xl drop-shadow-[0_0_10px_#111] text-center relative">
             <button
-              className="absolute -top-12 left-0 bg-[#FFFB00] text-black font-silkscreen px-3 py-1 sm:px-4 sm:py-2 rounded-lg shadow-lg hover:scale-105 transition text-base sm:text-[1.1rem]"
+              className="absolute cursor-pointer -top-12 left-0 bg-[#FFFB00] text-black font-silkscreen px-3 py-1 sm:px-4 sm:py-2 rounded-lg shadow-lg hover:scale-105 transition text-base sm:text-[1.1rem]"
               onClick={() => setShowModal(false)}
               >
               ← Back
@@ -341,7 +341,7 @@ return (
                 <button
                 key={lang}
                 onClick={() => toggleLanguage(lang)}
-                className={`py-2 px-3 sm:py-3 sm:px-4 rounded-lg font-silkscreen text-base sm:text-[1.1rem] border-[3px] transition ${
+                className={`py-2 px-3 cursor-pointer sm:py-3 sm:px-4 rounded-lg font-silkscreen text-base sm:text-[1.1rem] border-[3px] transition ${
                   selectedLanguage === lang
                   ? "text-[#FFFB00] border-[#FFFB00] bg-[#FFFB00]/5 drop-shadow-[0_0_7px_#FFFB00]"
                   : "text-gray-500 bg-gray-500/20 border-gray-500 hover:border-[#FFFB00] hover:text-[#FFFB00] hover:drop-shadow-[0_0_7px_#111]"
@@ -352,7 +352,7 @@ return (
               ))}
             </div>
             <button
-              className="bg-white text-black font-silkscreen px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-[1.2rem] drop-shadow-[0_0_7px_#111] hover:drop-shadow-[0_0_10px_#111]"
+              className="bg-white cursor-pointer text-black font-silkscreen px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-[1.2rem] drop-shadow-[0_0_7px_#111] hover:drop-shadow-[0_0_10px_#111]"
               onClick={() => {
                 if (selectedLanguage) {
                   setShowModal(false);
@@ -372,7 +372,7 @@ return (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="relative bg-black border-4 border-[#FFFB00] p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-xl drop-shadow-[0_0_10px_#111] text-center">
             <button
-              className="absolute -top-12 left-0 bg-[#FFFB00] text-black font-silkscreen px-3 py-1 sm:px-4 sm:py-2 rounded-lg shadow-lg hover:scale-105 transition text-base sm:text-[1.1rem]"
+              className="absolute cursor-pointer -top-12 left-0 bg-[#FFFB00] text-black font-silkscreen px-3 py-1 sm:px-4 sm:py-2 rounded-lg shadow-lg hover:scale-105 transition text-base sm:text-[1.1rem]"
               onClick={() => setShowRulesModal(false)}
               >
               ← Back
@@ -403,7 +403,7 @@ return (
                 <div className="flex justify-between items-center gap-2 sm:gap-3 bg-[#111] border-[2px] border-[#FFFB00] px-3 py-2 sm:px-5 sm:py-3 rounded-lg font-silkscreen text-base sm:text-[1.1rem] text-[#FFFB00] shadow-[0_0_8px_#FFFB00] transition-all duration-300 group-hover:bg-red/0 group-hover:border-red-500 group-hover:text-red-300 group-hover:shadow-[0_0_8px_red] w-full max-w-md">
                   <span className="truncate text-xs sm:text-base">{rulesFile.name}</span>
                   <button
-                    className="ml-2 sm:ml-3 text-red-400 hover:text-red-300 hover:scale-110 transition text-lg sm:text-[1.3rem]"
+                    className="ml-2 cursor-pointer sm:ml-3 text-red-400 hover:text-red-300 hover:scale-110 transition text-lg sm:text-[1.3rem]"
                     onClick={() => setRulesFile(null)}
                     title="Remove File"
                     >
@@ -413,7 +413,7 @@ return (
               </div>
             )}
             <button
-              className="mt-6 sm:mt-8 bg-white text-black font-silkscreen px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-[1.2rem] drop-shadow-[0_0_7px_#111] hover:drop-shadow-[0_0_10px_#111]"
+              className="mt-6 cursor-pointer sm:mt-8 bg-white text-black font-silkscreen px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-base sm:text-[1.2rem] drop-shadow-[0_0_7px_#111] hover:drop-shadow-[0_0_10px_#111]"
               onClick={() => setShowRulesModal(false)}
               >
               DONE
