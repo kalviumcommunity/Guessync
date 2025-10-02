@@ -127,7 +127,7 @@ return (
               key={digit}
               ref={(el) => (buttonRefs.current[digit] = el)}
               onClick={() => handleDigit(digit.toString())}
-              className={`bg-gray-200 text-black text-xl font-silkscreen py-5 px-0 border-4 border-black shadow-[4px_4px_0_#000] hover:bg-gray-300 transition-all duration-150 ${getButtonActiveClass(
+              className={`bg-gray-200 text-black text-xl font-silkscreen py-5 px-0 border-4 border-black cursor-pointer shadow-[4px_4px_0_#000] hover:bg-gray-300 transition-all duration-150 ${getButtonActiveClass(
                 digit
               )} w-[80px]`}
             >
@@ -138,7 +138,7 @@ return (
           <button
             ref={(el) => (buttonRefs.current["0"] = el)}
             onClick={() => handleDigit("0")}
-            className={`bg-gray-200 text-black text-xl py-5 px-0 border-4 border-black font-silkscreen shadow-[4px_4px_0_#000] hover:bg-gray-300 transition-all duration-150 ${getButtonActiveClass(
+            className={`bg-gray-200 cursor-pointer text-black text-xl py-5 px-0 border-4 border-black font-silkscreen shadow-[4px_4px_0_#000] hover:bg-gray-300 transition-all duration-150 ${getButtonActiveClass(
               "0"
             )} w-[80px]`}
           >
@@ -148,7 +148,7 @@ return (
           <button
             ref={(el) => (buttonRefs.current["join"] = el)}
             onClick={handleJoin}
-            className={`w-[177px] col-span-2 bg-black text-white text-lg py-0 font-silkscreen border-4 border-black shadow-[4px_4px_0_#000] hover:bg-gray-200 hover:cursor-pointer hover:text-black transition-all duration-150 ${getButtonActiveClass(
+            className={`w-[177px] cursor-pointer col-span-2 bg-black text-white text-lg py-0 font-silkscreen border-4 border-black shadow-[4px_4px_0_#000] hover:bg-gray-200 hover:cursor-pointer hover:text-black transition-all duration-150 ${getButtonActiveClass(
               "join"
             )}`}
           >
